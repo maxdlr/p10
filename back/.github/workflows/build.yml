@@ -18,6 +18,10 @@ jobs:
         with:
           java-version: 11
           distribution: 'zulu' # Alternative distribution options are available.
+      - name: SonarQube Scan
+        uses: SonarSource/sonarqube-scan-action@v4
+        env:
+            SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
       - name: Cache SonarQube packages
         uses: actions/cache@v4
         with:
