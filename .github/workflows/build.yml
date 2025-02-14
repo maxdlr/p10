@@ -40,7 +40,7 @@ jobs:
         run: cd back && mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=maxdlr_p10
 
       - name: Tests
-        run: cd back && mvn clean tests
+        run: cd back && mvn clean test
 
   sonarqube:
     name: SonarQube
