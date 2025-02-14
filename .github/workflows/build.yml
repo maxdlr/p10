@@ -45,5 +45,9 @@ jobs:
         uses: SonarSource/sonarqube-scan-action@v4
         with:
           projectBaseDir: front/
+        args: >
+          -Dsonar.organization=maxdlr
+          -Dsonar.projectKey=maxdlr_p10
+
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
