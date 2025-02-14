@@ -37,7 +37,7 @@ jobs:
       - name: Build and analyze
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-        run: cd back && mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=maxdlr_p10
+        run: cd back && mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=maxdlr_p10 -Dmaven.test.skip=true
 
       - name: Tests
         run: cd back && mvn clean test
