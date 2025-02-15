@@ -1,7 +1,7 @@
 networks:
   bobapp:
     name: bobapp
-    external: false
+    external: true
 
 services:
   back:
