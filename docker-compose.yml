@@ -1,25 +1,8 @@
-networks:
-  bobapp:
-    name: bobapp
-    external: false
-
 services:
-  back:
-    container_name: back-end
+  bobapp:
+    container_name: bobapp
     build:
-        context: ./back
+        context: .
         dockerfile: Dockerfile
     ports:
-      - "8080:8080"
-    networks:
-      - bobapp
-
-  front:
-    container_name: front-end
-    build:
-      context: ./front
-      dockerfile: Dockerfile
-    ports:
       - "4200:80"
-    networks:
-      - bobapp
