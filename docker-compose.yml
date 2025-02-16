@@ -1,9 +1,8 @@
 services:
-  app:
-    container_name: app
+  bobapp:
+    container_name: bobapp
     build:
         context: .
         dockerfile: Dockerfile
     ports:
-      - "8080:8080"
       - "4200:80"
