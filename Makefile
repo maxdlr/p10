@@ -5,6 +5,13 @@ default: help
 run: ## Start project
 	docker compose up --force-recreate --build --remove-orphans
 
+back-tests: ## Run Back-end tests
+	cd back && mvn clean test
+	make back-tests-report
+
+back-tests-report: ## Open tests coverage report
+	open back/target/site/jacoco/index.html
+
 update-docker-image: ## Build and Push new Docker image
 	docker build -t maxdlr/bobapp:latest .
 	docker push maxdlr/bobapp:latest
