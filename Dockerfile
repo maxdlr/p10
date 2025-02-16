@@ -1,10 +1,10 @@
-FROM node:latest as frontend-build
+FROM node:latest AS frontend-build
 WORKDIR /usr/local/app
 COPY ./front/ /usr/local/app/
 RUN yarn
 RUN npm run build
 
-FROM maven:3.6.3-jdk-11-slim as backend-build
+FROM maven:3.6.3-jdk-11-slim AS backend-build
 WORKDIR /workspace
 COPY ./back/pom.xml /workspace
 COPY ./back/src /workspace/src
