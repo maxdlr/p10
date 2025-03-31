@@ -1,0 +1,4 @@
+https://github.com/maxdlr/p10
+
+Document explicatif (recommandé) : https://docs.maxdlr.com/s/3eef5107-aa61-47f1-b464-81c9394227bf/doc/p10-cicd-bobapp-CvQPMMvYOm
+note: Le document pdf joint a ce TXT n'est qu'un export de ce lien.
